@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn_button = (Button)findViewById(R.id.btn_button);
 
+        // Oreo에서만 동작가능한 PIP모드라서 분기처리를 해준다.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             btn_button.setOnClickListener(new View.OnClickListener() {
                 @Override
